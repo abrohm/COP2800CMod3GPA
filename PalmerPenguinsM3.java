@@ -3,7 +3,7 @@
  //05/29/2026
  //Program to PalmerPenguins branching logic using if-else
  
- public class PalmerPenguins { 
+ public class PalmerPenguinsM3 { 
      
      // constants to represent the species and count
      static final String SP_CHINSTRAP = "Chinstrap";
@@ -45,22 +45,24 @@
          NUM_ADELIE) {
              System.out.println(SP_CHINSTRAP + " penguins are the most populous. ");
              
+         } else if (NUM_CHINSTRAP > NUM_GENTOO
+                  && NUM_CHINSTRAP > NUM_ADELIE) {
+             System.out.println(SP_CHINSTRAP + " penguins are the most populous.");
+             
          } else if (NUM_ADELIE > NUM_CHINSTRAP
                   && NUM_ADELIE > NUM_GENTOO) {
-             System.out.println(SP_ADELIE + " penguins are the most populous.");
-             
-         } else if (NUM_GENTOO > NUM_CHINSTRAP
-                  && NUM_GENTOO > NUM_ADELIE) {
              System.out.println(SP_GENTOO + " penguins are the most populous.");
              
-         } else if (NUM_CHINSTRAP >NUM_GENTOO
-                  && NUM_CHINSTRAP >NUM_ADELIE) {
+         } else if (NUM_GENTOO >NUM_CHINSTRAP
+                  && NUM_GENTOO >NUM_ADELIE) {
              System.out.println(SP_CHINSTRAP + " penguins are the most populous.");
              
          } else {
-             System.out.println("There is a tie between species for the most populous,");
+             System.out.println("There is a tie between species for the most populous.");
          }    
         String chosenSpecies = SP_GENTOO; //change this to analyze a different species
+        
+             System.out.println("Individual Species Switch Statement Analysis:");
          
         switch (chosenSpecies) {
             case SP_CHINSTRAP:
@@ -80,7 +82,11 @@
         NUM_ADELIE,
                                    ((double) NUM_ADELIE /
         totalPenguins * 100));
-                            
+                break;   
+            
+             default:
+                  System.out.println("Species not recognized.");
+                break;               
      }
    }
 }
